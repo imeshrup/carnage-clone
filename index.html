@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/e108b427a0.js" crossorigin="anonymous"></script>
+    
+</head>
+<body class="bg-black">
+
+    <!-- Navbar -->
+    <nav class="bg-black p-5 relative z-20">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Menu Icon -->
+            <div class="block lg:hidden">
+                <i class="fas fa-bars text-white text-2xl"></i>
+            </div>
+            <!-- Carnage Logo -->
+            <div class="flex items-center lg:text-left">
+                <img src="/carnage-img/logo.png" alt="Carnage Logo" class="h-14 w-52 ml-6">
+            </div>
+            <!-- Menu -->
+            <div class="flex hidden lg:flex items-center space-x-4">
+                <a href="" class="text-gray-400">HOME </a>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500 submenu relative">WOMEN'S <i class="fa-solid fa-caret-down"></i></a>
+                    <!-- Submenu for Women -->
+                    <div class="hidden absolute bg-gray-950 text-white p-2 space-y-2 w-56 left-0">
+                        <a href="#" class="block">SHOP ALL</a>
+                        <a href="#" class="block">T-Shirts</a>
+                        <a href="#" class="block">Polos</a>
+                        <a href="#" class="block">Crop Tops</a>
+                        <a href="#" class="block">Tank Tops</a>
+                    </div>
+                </div>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500">MEN'S <i class="fa-solid fa-caret-down"></i></a>
+                    <!-- Submenu for Men -->
+                    <div class="hidden absolute bg-gray-950 text-white p-2 space-y-2 w-56 left-0">
+                        <a href="#" class="block">SHOP ALL</a>
+                        <a href="#" class="block">T-Shirts</a>
+                        <a href="#" class="block">Polos</a>
+                        <a href="#" class="block">Crop Tops</a>
+                        <a href="#" class="block">Tank Tops</a>
+                        <a href="#" class="block">Shorts</a>
+                        <a href="#" class="block">Compressions</a>
+                    </div>
+                </div>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500">NEW DROP</a>
+                    <!-- Submenu for Services -->
+                </div>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500">SHOP LATEST <i class="fa-solid fa-caret-down"></i></a>
+                    <!-- Submenu for Services -->
+                    <div class="hidden absolute bg-gray-950 text-white p-2 space-y-2 w-56 left-0">
+                        <a href="#" class="block">BEST SELLING</a>
+                        <a href="#" class="block">RESTOCK</a>
+                        <a href="#" class="block">LAST CHANCE</a>
+                    </div>
+                </div>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500">ACCESSORIES <i class="fa-solid fa-caret-down"></i></a>
+                    <!-- Submenu for Services -->
+                    <div class="hidden absolute bg-gray-950 text-white p-2 space-y-2 w-56 left-0">
+                        <a href="#" class="block">Shop All</a>
+                        <a href="#" class="block">Jewellery</a>
+                        <a href="#" class="block">Hats & Caps</a>
+                        <a href="#" class="block">Slides</a>
+                    </div>
+                </div>
+                <div class="group relative inline-block">
+                    <a href="" class="text-white hover:text-slate-500">GIFT CARDS</a>
+                    <!-- Submenu for Services -->
+                    </div>
+                </div>
+                <!-- Profile and Search Icons (hidden on smaller screens) -->
+                <div class="hidden lg:flex items-center space-x-4 ml-80">
+                    <i class="fas fa-user text-white text-xl mr-4"></i>
+                    <i class="fas fa-search text-white text-xl mr-6"></i>
+                </div>
+                <!-- Cart Icon -->
+                <div>
+                    <i class="fas fa-shopping-cart text-white text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cover Photo -->
+    <section id="1">
+    <div class="bg-cover h-screen w-screen overflow-hidden relative z-0">
+        <!-- Adjust the image source and other styles based on your design -->
+        <img src="/carnage-img/Main_Banner.jpg" alt="Cover Photo" class="h-full object-cover">
+    </div>    
+    </section>
+
+    <!-- Section 2 Content -->
+<section id="2" class="container px-4 lg:px-0 relative z-10">
+    <div class="flex flex-col lg:flex-row items-center">
+        <!-- Image -->
+        <div>
+            <img src="/carnage-img/download.jpeg" alt="Section 2 Image" class="w-full h-auto">
+        </div>
+        <!-- Content -->
+        <div class="lg:pl-8 lg:mt-0">
+            <h1 class="text-4xl font-bold text-white mb-6">SHOP THE LASTEST DROP</h1>
+            <p class="text-white">One click to browse all Latest Releases + Restocks</p>
+            <button class="mt-8 px-8 py-2.5 rounded-full hover:bg-gray-300  bg-white text-gray-700">SHOP NOW</button>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        // JavaScript for handling submenu visibility
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.group');
+
+            menuItems.forEach(item => {
+                const submenu = item.querySelector('.absolute');
+                item.addEventListener('mouseover', () => {
+                    submenu.classList.remove('hidden');
+                });
+
+                item.addEventListener('mouseout', () => {
+                    submenu.classList.add('hidden');
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const coverPhoto = document.querySelector('.cover-photo');
+            coverPhoto.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
